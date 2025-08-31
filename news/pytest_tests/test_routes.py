@@ -30,10 +30,10 @@ def test_pages_availability_for_anonymous_user(client, name, args):
         (lf('auth_user_client'), HTTPStatus.NOT_FOUND),
         (lf('author_client'), HTTPStatus.OK)
     ],
-) 
+)
 @pytest.mark.parametrize('name, args', (
-        ('news:edit', lf('id_for_comment')),
-        ('news:delete', lf('id_for_comment'))
+    ('news:edit', lf('id_for_comment')),
+    ('news:delete', lf('id_for_comment'))
 ))
 def test_availability_for_comment_edit_and_delete(
     parametrized_client,
@@ -51,7 +51,7 @@ def test_availability_for_comment_edit_and_delete(
     'name, args', (
         ('news:edit', lf('id_for_new')),
         ('news:delete', lf('id_for_new'))
-        )
+    )
 )
 @pytest.mark.django_db()
 def test_redirect_for_anonymous_client(name, args, client):

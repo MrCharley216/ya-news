@@ -1,6 +1,7 @@
 """Файл тестов логики проекта."""
-import pytest
 from http import HTTPStatus
+
+import pytest
 from django.urls import reverse
 from pytest_django.asserts import assertRedirects
 from pytest_lazy_fixtures import lf

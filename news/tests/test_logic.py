@@ -49,6 +49,7 @@ class TestCommentCreation(TestCase):
         comments_count = Comment.objects.count()
         self.assertEqual(comments_count, 0)
 
+
 class TestCommentEditDelete(TestCase):
     COMMENT_TEXT = 'Текст комментария'
     NEW_COMMENT_TEXT = 'Обновлённый комментарий'
